@@ -50,8 +50,9 @@ var StateServer = (function () {
     };
     StateServer.prototype._pushEvent = function (event) {
         if (this._eventHandler)
-            event = this._eventHandler;
-        if (event)
+            this.events.push(event);
+        var result = this._eventHandler(event);
+        if (result)
             this.events.push(event);
     };
     StateServer.prototype.getEvents = function () {

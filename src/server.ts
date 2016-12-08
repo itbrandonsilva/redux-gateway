@@ -2,7 +2,7 @@ import { StateClient } from './client';
 import * as sio from 'socket.io';
 
 export type ActionTransformer = (clientId: string, action: any) => any;
-export type EventHandler = (clientId: string, action: any) => boolean;
+export type EventHandler = (event: any) => boolean;
 export type GetStateWrapper = () => any;
 export type InputHandler = (input: Input) => void;
 export interface Event {
@@ -70,8 +70,9 @@ export class StateServer {
     }
 
     private _pushEvent(event: any) {
-        if (this._eventHandler) event = this._eventHandler;
-        if (event) this.events.push(event);
+        if (this._eventHandler) this.events.push(event);
+        let result = this._eventHandler(event);
+        if (result) this.events.push(event);
     }
 
     getEvents() {

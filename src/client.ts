@@ -1,4 +1,3 @@
-import { StateServer, Input } from './server';
 import * as Redux from 'redux';
 import * as sio from 'socket.io-client';
 
