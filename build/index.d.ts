@@ -1,2 +1,2 @@
 export { StateClient } from './client';
-export { ActionTransformer, EventHandler, GetStateWrapper, InputHandler, Input, StateServer } from './server';
+export { ActionTransformer, Event, EventHandler, GetStateWrapper, InputHandler, Input, StateServer } from './server';
