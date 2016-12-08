@@ -1,5 +1,5 @@
 "use strict";
-var sio = require('socket.io');
+var sio = require("socket.io");
 ;
 var StateServer = (function () {
     /**
@@ -9,8 +9,8 @@ var StateServer = (function () {
      *
      */
     function StateServer(getState, inputHandler, port) {
-        var _this = this;
         if (port === void 0) { port = 7541; }
+        var _this = this;
         this.getState = getState;
         this.inputHandler = inputHandler;
         this.actions = [];

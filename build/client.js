@@ -1,5 +1,5 @@
 "use strict";
-var sio = require('socket.io-client');
+var sio = require("socket.io-client");
 var StateClient = (function () {
     /**
      * @param initCb Callback to receive the initial state from the `StateServer`.
@@ -9,9 +9,9 @@ var StateClient = (function () {
      *
      */
     function StateClient(initCb, actionsCb, host, port) {
-        var _this = this;
         if (host === void 0) { host = '127.0.0.1'; }
         if (port === void 0) { port = 7541; }
+        var _this = this;
         this.socket = sio(host + ':' + port);
         this.socket.on('init', function (data) {
             _this.clientId = data.clientId;

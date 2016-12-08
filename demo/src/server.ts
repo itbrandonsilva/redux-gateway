@@ -1,5 +1,5 @@
-import { StateServer } from './../src/server';
-import { reducer } from '../../game/reducer'
+import { StateServer } from '../../src/server';
+import { reducer } from './reducer'
 import { createStore, applyMiddleware } from 'redux';
 
 class Game {

@@ -1,4 +1,4 @@
-import { StateClient } from '../src/client';
+import { StateClient } from '../../src/client';
 import { reducer } from './reducer';
 import * as Redux from 'redux';
 

@@ -1,16 +1,16 @@
 module.exports = {
-    entry: './client.ts',
+    entry: './src/client.ts',
     output: {
-        path: './',
-        filename: 'bundle.js',
+        path: __dirname,
+        filename: './build/bundle.js',
     },
     resolve: {
-        extensions: ['', '.ts', '.tsx', '.js']
+        extensions: ['', '.ts', '.js']
     },
     module: {
         loaders: [
             {
-                test: /\.tsx?$/,
+                test: /\.ts$/,
                 loader: 'ts-loader'
             }
         ]
