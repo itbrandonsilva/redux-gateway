@@ -2,6 +2,11 @@ export declare type ActionTransformer = (clientId: string, action: any) => any;
 export declare type EventHandler = (clientId: string, action: any) => boolean;
 export declare type GetStateWrapper = () => any;
 export declare type InputHandler = (input: Input) => void;
+export interface Event {
+    type: string;
+    clientId: string;
+    state?: any;
+}
 export interface Input {
     clientId: string;
     name: string;

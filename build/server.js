@@ -1,6 +1,7 @@
 "use strict";
 var sio = require("socket.io");
 ;
+;
 var StateServer = (function () {
     /**
      * @param getState Function that retrieves the current state

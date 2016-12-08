@@ -5,6 +5,11 @@ export type ActionTransformer = (clientId: string, action: any) => any;
 export type EventHandler = (clientId: string, action: any) => boolean;
 export type GetStateWrapper = () => any;
 export type InputHandler = (input: Input) => void;
+export interface Event {
+    type: string;
+    clientId: string;
+    state?: any;
+};
 export interface Input {
     clientId: string;
     name: string;

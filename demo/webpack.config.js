@@ -17,7 +17,8 @@ module.exports = {
     },
     ts: {
         compilerOptions: {
-            outDir: './demo/build'
+            outDir: './demo/build',
+            declaration: false
         }
     }
 }
