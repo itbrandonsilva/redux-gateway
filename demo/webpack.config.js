@@ -14,5 +14,10 @@ module.exports = {
                 loader: 'ts-loader'
             }
         ]
+    },
+    ts: {
+        compilerOptions: {
+            outDir: './demo/build'
+        }
     }
 }
