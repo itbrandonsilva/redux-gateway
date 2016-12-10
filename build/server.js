@@ -82,8 +82,6 @@ var StateServer = (function () {
      */
     StateServer.prototype.flush = function () {
         var _this = this;
-        if (this.actions.length)
-            console.log(this.actions);
         Object.keys(this.clients).forEach(function (clientId) {
             var actions = _this.actions;
             if (_this._transformer)
