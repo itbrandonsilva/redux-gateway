@@ -104,7 +104,6 @@ export class StateServer {
      * 
      */
     flush() {
-        if (this.actions.length) console.log(this.actions);
         Object.keys(this.clients).forEach(clientId => {
             let actions = this.actions;
             if (this._transformer) actions = this.actions.map(action => {
